@@ -5,7 +5,7 @@ interface ICreateUserDTO {
   email: string;
 }
 
-interface IUsersRepository {
+interface IUserRepository {
   create({ name, email }: ICreateUserDTO): User;
   findById(id: string): User | undefined;
   findByEmail(email: string): User | undefined;
@@ -13,4 +13,4 @@ interface IUsersRepository {
   list(): User[];
 }
 
-export { IUsersRepository, ICreateUserDTO };
+export { IUserRepository, ICreateUserDTO };
